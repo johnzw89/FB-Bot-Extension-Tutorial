@@ -1,0 +1,173 @@
+body {
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+#search-webview {
+  font-family: Helvetica, sans-serif;
+  width: 100%;
+}
+#search-webview #search-form {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 8px;
+  background: white;
+  z-index: 9999;
+}
+#search-webview #search-form #search-input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  text-indent: 30px;
+  background-image: url('search-icon.png');
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: 9px 8px;
+  background-color: #eaebed;
+  height: 30px;
+  line-height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 5px;
+}
+
+#search-webview #search-form #search-input:focus {
+  outline: none;
+}
+
+#search-webview .loader-gif {
+  display: block;
+  width: 40px;
+  margin: 0 auto;
+}
+
+#search-webview .hidden {
+  display: none !important;
+}
+
+#search-webview #search-loader {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+}
+
+#search-webview #load-more-loader {
+  bottom: 100px;
+  display: block;
+  margin: 0 auto;
+}
+#search-webview #notification-container {
+  font-size: 0.8em;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+
+  /*Slider*/
+  overflow-y: hidden;
+  max-height: 500px;
+  transition-property: all;
+  /*transition-duration: .5s;*/
+  -webkit-transition: max-height 1.0s ease-in-out;
+  -moz-transition: max-height 1.0s ease-in-out;
+  -o-transition: max-height 1.0s ease-in-out;
+  transition: max-height 1.0s ease-in-out;
+}
+
+#search-webview #notification-container .success-notification {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#search-webview #notification-container .success-notification {
+  
+}
+
+#search-webview #notification-container.closed {
+  max-height: 0;
+}
+
+#search-webview #title-container {
+  font-size: 0.9em;
+  font-weight: bolder;
+  margin-top: 60px;
+  margin-left: 8px;
+}
+#search-webview #results-container {
+  margin-top: 15px;
+}
+#search-webview #results-container .recipe-card {
+  padding: 5px;
+  position: relative;
+}
+#search-webview #results-container .recipe-card:focus {
+  background-color: #f3f3f3;
+}
+#search-webview #results-container .recipe-card:active {
+  background-color: #f3f3f3;
+}
+
+#search-webview #results-container .recipe-card .img-container {
+  display: inline-block;
+  margin-right: 10px;
+  height: 90.39px;
+  width: 120px;
+  background-color: lightgray;
+}
+#search-webview #results-container .recipe-card .img-container img{
+  width: 100%;
+}
+
+#search-webview #results-container .recipe-card .txt-container {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.85em;
+  width: 44%;
+}
+#search-webview #results-container .recipe-card .txt-container .name {
+  font-weight: bold;
+}
+#search-webview #results-container .recipe-card .txt-container .talent-name {
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+#search-webview #results-container .recipe-card .txt-container .rating {
+  height: 18px;
+}
+
+#search-webview #results-container .recipe-card .txt-container .send-blue {
+  position: absolute;
+  right: 12pt;
+  top: 32px;
+  font-size: 16pt;
+  width: 1em;
+}
+
+#search-webview #load-more-container {
+  margin-top: 15px;
+  margin-bottom: 65px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#search-webview #load-more-container #load-more {
+  background-color: #4267b2;
+  border-color: #4267b2;
+  border-radius: 2px;
+  box-sizing: border-box;
+  transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  /*box-shadow: 0px 0px 2px 1px #545353;*/
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/{{bucket_name}}/webviews.css">
+  <script src="https://s3.amazonaws.com/{{bucket_name}}/webviews.js"></script> -->
+
+  <link rel="stylesheet" media="all" href="webviews.css">
+  <script src="webviews.js"></script>
+
+</head>
+<body>
+	<script>
+		// (function(d, s, id){
+		//   var js, fjs = d.getElementsByTagName(s)[0];
+		//   if (d.getElementById(id)) {return;}
+		//   js = d.createElement(s); js.id = id;
+		//   js.src = "//connect.facebook.com/en_US/messenger.Extensions.js";
+		//   fjs.parentNode.insertBefore(js, fjs);
+		// }(document, 'script', 'Messenger'));
+	</script>
+	<div id="search-webview">
+		<form id="search-form" action="." onsubmit="return false">
+		  <input type="search" id="search-input" name="search_term" placeholder="What are you craving?" onclick="this.select()" autocomplete="off">
+		</form>
+		
+		<div id="title-container">
+			All Recipes
+		</div>
+		
+		<div id="results-container"></div>
+		<div id="notification-container"></div>
+	</div>
+</body>
+</html>
